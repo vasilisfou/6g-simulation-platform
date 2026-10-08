@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 6g-simulation-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 6g-simulation-api
+  template:
+    metadata:
+      labels:
+        app: 6g-simulation-api
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/vasilisfou/6g-simulation-platform:latest
+          ports:
+            - containerPort: 8000
