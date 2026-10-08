@@ -1,0 +1,12 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/vasilisfou/6g-simulation-platform
+  pullPolicy: Always
+  tag: latest
+
+service:
+  type: NodePort
+  port: 8000
+
+resources: {}

@@ -1,0 +1,8 @@
+apiVersion: v2
+name: 6g-simulation
+description: Helm chart for the 6G Simulation Platform
+
+type: application
+
+version: 0.1.0
+appVersion: "0.1.0"
