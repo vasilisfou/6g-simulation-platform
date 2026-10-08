@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from simulator.simulation import run_simulation
+from prometheus_fastapi_instrumentator import Instrumentator
 
 app = FastAPI(title="6G Simulation Platform")
+Instrumentator().instrument(app).expose(app)
 
 
 @app.get("/")
